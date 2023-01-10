@@ -2,8 +2,6 @@ import 'zone.js/node';
 
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
-import rewrite from 'express-urlrewrite';
-
 import express from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
@@ -23,9 +21,6 @@ export function app(): express.Express {
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
-
-  server.get(`/ngu/:file.:ext`, rewrite('/:file.:ext'));
-  server.get(`/ngu/assets/:path/:file.:ext`, rewrite('/assets/:path/:file.:ext'));
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
