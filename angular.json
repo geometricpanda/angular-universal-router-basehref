@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "universal-router-base": {
+    "app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/universal-router-base/browser",
+            "outputPath": "dist/app/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "universal-router-base:build:production"
+              "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "universal-router-base:build:development"
+              "browserTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "universal-router-base:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/universal-router-base/server",
+            "outputPath": "dist/app/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -116,12 +116,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "universal-router-base:build:development",
-              "serverTarget": "universal-router-base:server:development"
+              "browserTarget": "app:build:development",
+              "serverTarget": "app:server:development"
             },
             "production": {
-              "browserTarget": "universal-router-base:build:production",
-              "serverTarget": "universal-router-base:server:production"
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -135,12 +135,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "universal-router-base:build:production",
-              "serverTarget": "universal-router-base:server:production"
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
             },
             "development": {
-              "browserTarget": "universal-router-base:build:development",
-              "serverTarget": "universal-router-base:server:development"
+              "browserTarget": "app:build:development",
+              "serverTarget": "app:server:development"
             }
           },
           "defaultConfiguration": "production"

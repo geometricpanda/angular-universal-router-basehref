@@ -1,16 +1,20 @@
 {
-  "name": "universal-router-base",
+  "name": "app",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.x.x"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
+    "serve": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run universal-router-base:serve-ssr",
-    "serve:ssr": "node dist/universal-router-base/server/main.js",
-    "build:ssr": "ng build && ng run universal-router-base:server",
-    "prerender": "ng run universal-router-base:prerender"
+    "dev:ssr": "ng run app:serve-ssr",
+    "build:ssr": "ng build && ng run app:server",
+    "prerender": "ng run app:prerender",
+    "start": "node dist/app/server/main.js",
+    "gcp-build": "ng run app:build:production && ng run app:server:production"
   },
   "private": true,
   "dependencies": {
