@@ -1,0 +1,13 @@
+steps:
+  - name: node
+    entrypoint: yarn
+    args: ['install']
+
+  - name: node
+    entrypoint: yarn
+    args: ['ng', 'run', 'universal-router-base:build:production']
+
+  - name: node
+    entrypoint: yarn
+    args: ['ng', 'run', 'universal-router-base:server:production']
+# [END cloudbuild_yarn_node]
