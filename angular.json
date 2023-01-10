@@ -31,7 +31,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "ngu",
+              "baseHref": "/ngu/",
               "budgets": [
                 {
                   "type": "initial",
